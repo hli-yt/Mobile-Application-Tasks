@@ -125,3 +125,43 @@ void main() {
   print('Sorted ascending: $sortedNumbers');
   
 }
+
+// Q1. What is the difference between a List<int> and a List<dynamic> in Dart?
+// Why is it usually better to use a typed list like List<int>?
+// A List<int> can only contain integer values, while a List<dynamic> can contain
+// values of any type. Using a typed list like List<int> is better because it
+// provides type safety, prevents runtime errors from unexpected types, enables
+// better IDE support with autocomplete, and makes the code self-documenting.
+
+// Q2. In your findMax() function, why is it important to initialize your 
+// 'running maximum' variable to the first element of the list rather than to 0
+// or to a very small number? What could go wrong with the other approaches?
+// Initializing to the first element ensures correctness because if all numbers
+// are negative, starting from 0 would incorrectly return 0 as the maximum.
+// Similarly, starting from a very small number assumes knowledge about the data
+// range, which may not always be valid. Using the first element guarantees we
+// start with an actual value from the dataset.
+
+// Q3. Your calculateAverage() function calls calculateSum() internally. What 
+// software design principle does this demonstrate, and why is reusing existing
+// functions preferable to duplicating code?
+// This demonstrates the DRY (Don't Repeat Yourself) principle. Reusing existing
+// functions reduces code duplication, makes maintenance easier (fixing a bug in
+// one place fixes it everywhere), and ensures consistency across the codebase.
+
+// Q4. Describe in plain English what the for-in loop syntax does in Dart. How
+// is it different from a traditional for loop with an index? When would you
+// prefer one over the other?
+// The for-in loop iterates directly over each element in a collection without
+// needing an index variable. A traditional for loop uses an index to access
+// elements by position. For-in is preferred when you need to process every
+// element sequentially and don't need the index position. Traditional for loops
+// are better when you need the index, need to iterate in reverse, or need to
+// skip elements.
+
+// Q5. If someone calls your findMax() function with an empty list, what happens?
+// How could you modify the function to handle that case safely?
+// With an empty list, the function would throw an error when trying to access
+// numbers[0]. To handle this safely, we can check if the list is empty at the
+// start and either return a special value (like null or -1) or throw a
+// meaningful exception with a clear message.
