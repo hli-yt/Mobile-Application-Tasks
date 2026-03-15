@@ -77,4 +77,3 @@ interesting because it showed how real apps improve performance.
 I now feel more prepared to tackle Flutter development, understanding both the synchronous and asynchronous patterns that form 
 the foundation of mobile app development.
 
-* "The function of good software is to make the complex appear simple." * — Grady Booch
